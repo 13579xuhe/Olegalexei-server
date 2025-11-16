@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olegalexei | Xtra Rawstyle</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+<!-- 背景图片 -->
+<div class="background-container">
+    <div class="background-image"></div>
+</div>
+<div class="background-overlay"></div>
+
+<!-- SVG图标定义 -->
+<svg style="display: none;">
+    <!-- 菜单图标 -->
+    <symbol id="icon-bars" viewBox="0 0 448 512">
+        <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/>
+    </symbol>
+
+    <!-- 邮箱图标 -->
+    <symbol id="icon-envelope" viewBox="0 0 512 512">
+        <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/>
+    </symbol>
+
+    <!-- 电话图标 -->
+    <symbol id="icon-phone" viewBox="0 0 512 512">
+        <path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/>
+    </symbol>
+
+    <!-- 复制图标 -->
+    <symbol id="icon-copy" viewBox="0 0 448 512">
+        <path d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z"/>
+    </symbol>
+
+    <!-- 发送图标 -->
+    <symbol id="icon-paper-plane" viewBox="0 0 512 512">
+        <path d="M440 6.5L24 246.4c-34.4 19.9-31.1 70.8 5.7 85.9L144 379.6V464c0 46.4 59.2 65.5 86.6 28.6l43.8-59.1 111.9 46.2c5.9 2.4 12.1 3.6 18.3 3.6 8.2 0 16.3-2.1 23.6-6.2 12.8-7.2 21.6-20 23.9-34.5l59.4-387.2c6.1-40.1-36.9-68.8-71.5-48.9zM192 464v-64.6l36.6 15.1L192 464zm212.6-28.7l-153.8-63.5L391 169.5c10.7-15.5-9.5-33.5-23.7-21.2L155.8 332.6 48 288 464 48l-59.4 387.3z"/>
+    </symbol>
+
+    <!-- 播放图标 -->
+    <symbol id="icon-play" viewBox="0 0 448 512">
+        <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"/>
+    </symbol>
+
+    <!-- 上一曲图标 -->
+    <symbol id="icon-step-backward" viewBox="0 0 448 512">
+        <path d="M64 468V44c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v176.4l195.5-181C352.1 22.3 384 41.9 384 76v360c0 34.1-31.9 53.7-52.5 32.6L136 292.7V468c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12z"/>
+    </symbol>
+
+    <!-- 下一曲图标 -->
+    <symbol id="icon-step-forward" viewBox="0 0 448 512">
+        <path d="M384 44v424c0 6.6-5.4 12-12 12h-48c-6.6 0-12-5.4-12-12V291.6l-195.5 181C95.9 489.7 64 470.1 64 436V76c0-34.1 31.9-53.7 52.5-32.6L312 219.3V44c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12z"/>
+    </symbol>
+
+    <!-- 音量图标 -->
+    <symbol id="icon-volume-up" viewBox="0 0 576 512">
+        <path d="M215.03 71.05L126.06 160H24c-13.26 0-24 10.74-24 24v144c0 13.25 10.74 24 24 24h102.06l88.97 88.95c15.03 15.03 40.97 4.47 40.97-16.97V88.02c0-21.46-25.96-31.98-40.97-16.97zm233.32-51.08c-11.17-7.33-26.18-4.24-33.51 6.95-7.34 11.17-4.22 26.18 6.95 33.51 66.27 43.49 105.82 116.6 105.82 195.58 0 78.98-39.55 152.09-105.82 195.58-11.17 7.32-14.29 22.34-6.95 33.5 7.04 10.71 21.93 14.56 33.51 6.95C528.27 439.58 576 351.33 576 256S528.27 72.43 448.35 19.97zM480 256c0-63.53-32.06-121.94-85.77-156.24-11.19-7.14-26.03-3.82-33.12 7.46s-3.78 26.21 7.41 33.36C408.27 165.97 432 209.11 432 256s-23.73 90.03-63.48 115.42c-11.19 7.14-14.5 22.07-7.41 33.36 6.51 10.36 21.12 15.14 33.12 7.46C447.94 377.94 480 319.54 480 256zm-141.77-76.87c-11.58-6.33-26.19-2.16-32.61 9.45-6.39 11.61-2.16 26.2 9.45 32.61C327.98 228.28 336 241.63 336 256c0 14.38-8.02 27.72-20.92 34.81-11.61 6.41-15.84 21-9.45 32.61 6.43 11.66 21.05 15.8 32.61 9.45 28.23-15.55 45.77-45 45.77-76.88s-17.54-61.32-45.78-76.86z"/>
+    </symbol>
+
+    <!-- 暂停图标 -->
+    <symbol id="icon-pause" viewBox="0 0 448 512">
+        <path d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"/>
+    </symbol>
+
+    <!-- QQ图标 -->
+    <symbol id="icon-qq" viewBox="0 0 1024 1024">
+        <path d="M824.8 613.2c-16-51.4-34.4-94.6-62.7-165.3C766.5 262.2 689.3 112 511.5 112 331.7 112 256.2 265.2 261 447.9c-28.4 70.8-46.7 113.7-62.7 165.3-34 109.5-23 154.8-14.6 155.8 18 2.2 70.1-82.4 70.1-82.4 0 49 25.2 112.9 79.8 159-26.4 8.1-85.7 29.9-71.6 53.8 11.4 19.3 196.2 12.3 249.5 6.3 53.3 6 238.1 13 249.5-6.3 14.1-23.8-45.3-45.7-71.6-53.8 54.6-46.2 79.8-110.1 79.8-159 0 0 52.1 84.6 70.1 82.4 8.5-1.1 19.5-46.4-14.5-155.8z" fill="#ffffff"/>
+    </symbol>
+</svg>
+
+<!-- 导航栏 -->
+<header>
+    <a href="#" class="logo">Olegalexei</a>
+    <div class="menu-toggle" id="menuToggle">
+        <svg class="icon icon-bars"><use xlink:href="#icon-bars"></use></svg>
+    </div>
+    <nav class="nav-links" id="navLinks">
+        <a href="#section1" onclick="scrollToSection('section1')" data-zh="首页" data-en="Home">首页</a>
+        <a href="#section2" onclick="scrollToSection('section2')" data-zh="音乐" data-en="Music">音乐</a>
+        <a href="#section3" onclick="scrollToSection('section3')" data-zh="联系" data-en="Contact">联系</a>
+    </nav>
+    <button class="cta-button" id="languageToggle">切换为英语</button>
+</header>
+
+<!-- 首页部分 -->
+<div id="section1" class="page-section">
+    <section class="hero">
+        <div class="floating-elements">
+            <div class="floating-element element-1"></div>
+            <div class="floating-element element-2"></div>
+            <div class="floating-element element-3"></div>
+        </div>
+        <div class="hero-content">
+            <h1 data-zh="体验<span>电子音乐</span>的力量" data-en="Experience the Power of <span>Electronic Music</span>">体验<span>电子音乐</span>的力量</h1>
+            <p data-zh="Olegalexei带你进入电子音乐的奇幻世界，感受节奏与旋律的完美融合，创造难忘的夜晚体验。" data-en="Olegalexei takes you into the magical world of electronic music, feel the perfect fusion of rhythm and melody, and create unforgettable night experiences.">Olegalexei带你进入电子音乐的奇幻世界，感受节奏与旋律的完美融合，创造难忘的夜晚体验。</p>
+            <div class="hero-buttons">
+                <a href="#section2" class="btn btn-primary" onclick="scrollToSection('section2')" data-zh="最新歌曲" data-en="Latest Tracks">最新歌曲</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- 音乐部分 -->
+<div id="section2" class="page-section">
+    <section id="music">
+        <div class="section-title">
+            <h2 data-zh="最新曲目" data-en="Latest Tracks">最新曲目</h2>
+            <p data-zh="探索Olegalexei最新音乐作品" data-en="Discover Olegalexei's latest music works">探索Olegalexei最新音乐作品</p>
+        </div>
+        <div class="tracks-grid">
+            <!-- 曲目1 -->
+            <div class="track-card">
+                <div class="track-image">
+                    <img src="music/NOT%20RUN!!!/NOT%20RUN!!!.jpg" alt="NOT RUN!!!">
+                    <div class="track-overlay">
+                        <div class="play-track">
+                            <svg class="icon icon-play"><use xlink:href="#icon-play"></use></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="track-info-card">
+                    <h3>NOT RUN!!!</h3>
+                    <p data-zh="Xtra Raw • 2025" data-en="Xtra Raw • 2025">Xtra Raw • 2025</p>
+                </div>
+            </div>
+
+            <!-- 曲目2 -->
+            <div class="track-card">
+                <div class="track-image">
+                    <img src="music/Blackin%20Now/Blackin%20Now.jpg" alt="BLACKIN NOW">
+                    <div class="track-overlay">
+                        <div class="play-track">
+                            <svg class="icon icon-play"><use xlink:href="#icon-play"></use></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="track-info-card">
+                    <h3>BLACKIN NOW</h3>
+                    <p data-zh="Xtra Raw • 2025" data-en="Xtra Raw • 2025">Xtra Raw • 2025</p>
+                </div>
+            </div>
+
+            <!-- 曲目3 -->
+            <div class="track-card">
+                <div class="track-image">
+                    <img src="music/CHANGE/CHANGE.jpg" alt="CHANGE">
+                    <div class="track-overlay">
+                        <div class="play-track">
+                            <svg class="icon icon-play"><use xlink:href="#icon-play"></use></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="track-info-card">
+                    <h3>CHANGE</h3>
+                    <p data-zh="Hardbass • 2025" data-en="Hardbass • 2025">Hardbass • 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- 联系部分 -->
+<div id="section3" class="page-section">
+    <section id="contact">
+        <div class="section-title">
+            <h2 data-zh="联系合作" data-en="Contact & Collaboration">联系合作</h2>
+            <p data-zh="预订演出或商业合作，请与我联系" data-en="For booking shows or business collaborations, please contact me">预订演出或商业合作，请与我联系</p>
+        </div>
+        <div class="contact-container">
+            <!-- 联系信息 -->
+            <div class="contact-info">
+                <h3 data-zh="获取联系" data-en="Get In Touch">获取联系</h3>
+
+                <!-- 邮箱信息 -->
+                <div class="contact-detail">
+                    <div class="contact-icon">
+                        <svg class="icon icon-envelope"><use xlink:href="#icon-envelope"></use></svg>
+                    </div>
+                    <div>
+                        <h4 data-zh="邮箱" data-en="Email">邮箱</h4>
+                        <p>olegalexei987@163.com</p>
+                        <button onclick="copyEmail(event)" class="btn-small">
+                            <svg class="icon icon-copy"><use xlink:href="#icon-copy"></use></svg>
+                            <span data-zh="复制邮箱" data-en="Copy Email">复制邮箱</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- QQ信息 -->
+                <div class="contact-detail">
+                    <div class="contact-icon">
+                        <svg class="icon icon-qq"><use xlink:href="#icon-qq"></use></svg>
+                    </div>
+                    <div>
+                        <h4 data-zh="QQ" data-en="QQ">QQ</h4>
+                        <p>2722650338</p>
+                        <button onclick="copyQQ(event)" class="btn-small">
+                            <svg class="icon icon-copy"><use xlink:href="#icon-copy"></use></svg>
+                            <span data-zh="复制QQ" data-en="Copy QQ">复制QQ</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 邮件说明 -->
+                <div class="email-instructions">
+                    <h4 data-zh="发送邮件说明：" data-en="Email Instructions:">发送邮件说明：</h4>
+                    <ul>
+                        <li data-zh="填写下方表单并点击'发送邮件'" data-en="Fill out the form below and click 'Send Email'">填写下方表单并点击"发送邮件"</li>
+                        <li data-zh="系统将自动打开您的邮件客户端" data-en="The system will automatically open your email client">系统将自动打开您的邮件客户端</li>
+                        <li data-zh="收件人已预设为：olegalexei987@163.com" data-en="Recipient is pre-set to: olegalexei987@163.com">收件人已预设为：olegalexei987@163.com</li>
+                        <li data-zh="请检查内容后点击发送" data-en="Please review the content and click send">请检查内容后点击发送</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 联系表单 -->
+            <div class="contact-form">
+                <div id="formMessage" class="form-message info" data-zh="正在打开邮件客户端..." data-en="Opening email client...">
+                    正在打开邮件客户端...
+                </div>
+
+                <form id="contactForm">
+                    <input type="text" id="name" name="name" placeholder="您的姓名" data-zh-placeholder="您的姓名" data-en-placeholder="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="您的邮箱" data-zh-placeholder="您的邮箱" data-en-placeholder="Your Email" required>
+                    <input type="text" id="subject" name="subject" placeholder="邮件主题" data-zh-placeholder="邮件主题" data-en-placeholder="Email Subject" required>
+                    <textarea id="message" name="message" placeholder="请详细描述您的合作需求或问题..." data-zh-placeholder="请详细描述您的合作需求或问题..." data-en-placeholder="Please describe your collaboration needs or questions in detail..." required rows="6"></textarea>
+
+                    <div class="form-buttons">
+                        <button type="submit" class="btn btn-primary">
+                            <svg class="icon icon-paper-plane"><use xlink:href="#icon-paper-plane"></use></svg>
+                            <span data-zh="发送邮件" data-en="Send Email">发送邮件</span>
+                        </button>
+                        <button type="button" onclick="openEmptyEmail()" class="btn btn-primary">
+                            <svg class="icon icon-envelope"><use xlink:href="#icon-envelope"></use></svg>
+                            <span data-zh="直接写信" data-en="Compose Email">直接写信</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- 音乐播放器 -->
+<div class="music-player">
+    <div class="track-info">
+        <div class="track-cover"></div>
+        <div class="track-details">
+            <h4>Neon Dreams</h4>
+            <p>Olegalexei</p>
+        </div>
+    </div>
+    <div class="player-controls">
+        <button class="control-btn prev-btn">
+            <svg class="icon icon-step-backward"><use xlink:href="#icon-step-backward"></use></svg>
+        </button>
+        <button class="control-btn play-btn">
+            <svg class="icon icon-play"><use xlink:href="#icon-play"></use></svg>
+            <svg class="icon icon-pause" style="display: none;"><use xlink:href="#icon-pause"></use></svg>
+        </button>
+        <button class="control-btn next-btn">
+            <svg class="icon icon-step-forward"><use xlink:href="#icon-step-forward"></use></svg>
+        </button>
+    </div>
+    <div class="time-display">
+        <span class="current-time">0:00</span>
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+        <span class="duration">0:00</span>
+    </div>
+    <div class="volume-control">
+        <button class="control-btn volume-btn">
+            <svg class="icon icon-volume-up"><use xlink:href="#icon-volume-up"></use></svg>
+        </button>
+        <div class="volume-slider-container">
+            <input type="range" class="volume-slider" min="0" max="100" value="50">
+        </div>
+    </div>
+</div>
+
+<!-- 页脚 -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-column">
+            <h3>Olegalexei</h3>
+            <p data-zh="电子音乐制作人" data-en="Electronic Music Producer">电子音乐制作人</p>
+            <div class="social-links">
+                <a href="https://b23.tv/fd14y1V"><img class="bilibili" src="img/bilibili.png" alt="Bilibili"></a>
+                <a href="http://music.163.com/artist?id=58674558&userid=8509199118"><img class="bilibili" src="img/wangyiyun.png" alt="网易云音乐"></a>
+            </div>
+        </div>
+        <div class="footer-column">
+            <h3 data-zh="快速链接" data-en="Quick Links">快速链接</h3>
+            <ul class="footer-links">
+                <li><a href="#section1" onclick="scrollToSection('section1')" data-zh="首页" data-en="Home">首页</a></li>
+                <li><a href="#section2" onclick="scrollToSection('section2')" data-zh="音乐" data-en="Music">音乐</a></li>
+                <li><a href="#section3" onclick="scrollToSection('section3')" data-zh="联系" data-en="Contact">联系</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3 data-zh="支持" data-en="Support">支持</h3>
+            <ul class="footer-links">
+                <li><a href="#section3" onclick="scrollToSection('section3')" data-zh="联系我们" data-en="Contact Us">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        <p data-zh="&copy; 2023 Olegalexei. 保留所有权利" data-en="&copy; 2023 Olegalexei. All rights reserved">&copy; 2023 Olegalexei. 保留所有权利</p>
+    </div>
+</footer>
+
+<script src="js.js"></script>
+</body>
+</html>
