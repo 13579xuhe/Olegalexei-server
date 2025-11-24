@@ -88,8 +88,8 @@ const musicData = [
         artist: "Olegalexei＆KR_C",
         genre: "Xtra Raw",
         year: "2025",
-        audioUrl: "./music/NOT RUN!!!/NOT RUN!!!.mp3",
-        imageUrl: "./music/NOT RUN!!!/NOT RUN!!!.jpg"
+        audioUrl: "https://furrymiaomiao.oss-cn-beijing.aliyuncs.com/olegalexei/music/NOT%20RUN%21%21%21/NOT%20RUN%21%21%21.mp3",
+        imageUrl: "https://furrymiaomiao.oss-cn-beijing.aliyuncs.com/olegalexei/music/NOT%20RUN%21%21%21/NOT%20RUN%21%21%21.jpg"
     },
     {
         id: 2,
@@ -97,8 +97,8 @@ const musicData = [
         artist: "Olegalexei",
         genre: "Xtra Raw",
         year: "2025",
-        audioUrl: "./music/Blackin Now/Blackin Now.mp3",
-        imageUrl: "./music/Blackin Now/Blackin Now.jpg"
+        audioUrl: "https://furrymiaomiao.oss-cn-beijing.aliyuncs.com/olegalexei/music/Blackin%20Now/Blackin%20Now.mp3",
+        imageUrl: "https://furrymiaomiao.oss-cn-beijing.aliyuncs.com/olegalexei/music/Blackin%20Now/Blackin%20Now.jpg"
     },
     {
         id: 3,
@@ -106,8 +106,8 @@ const musicData = [
         artist: "Olegalexei",
         genre: "Hardbass",
         year: "2025",
-        audioUrl: "./music/CHANGE/CHANGE.mp3",
-        imageUrl: "./music/CHANGE/CHANGE.jpg"
+        audioUrl: "https://furrymiaomiao.oss-cn-beijing.aliyuncs.com/olegalexei/music/CHANGE/CHANGE.mp3",
+        imageUrl: "https://furrymiaomiao.oss-cn-beijing.aliyuncs.com/olegalexei/music/CHANGE/CHANGE.jpg"
     }
 ];
 
